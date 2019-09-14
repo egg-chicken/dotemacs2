@@ -6,7 +6,7 @@
 (column-number-mode t)
 (global-hl-line-mode)
 (global-auto-revert-mode 1)
-(electric-pair-mode 1)
+(electric-pair-mode -1)
 (setq show-paren-delay 0)
 (setq show-paren-style 'expression)
 (setq-default indent-tabs-mode nil)
@@ -65,7 +65,7 @@
 (defvar my/favorite-packages
   '(auto-complete rubocop exec-path-from-shell rspec-mode direnv
     rbenv yasnippet dumb-jump rg dired-subtree ivy counsel
-    slim-mode string-inflection
+    slim-mode string-inflection smartparens
     coffee-mode wgrep dashboard paradox web-mode
     projectile projectile-rails spaceline
     use-package magit forge key-chord rebecca-theme wdired))
@@ -298,6 +298,8 @@
 (use-package eww
   :config
   (setq eww-search-prefix "http://www.google.co.jp/search?q="))
+
+(use-package smartparens)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
